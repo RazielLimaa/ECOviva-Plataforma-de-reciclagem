@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { initAuth, useAuthStore } from './store/authStore';
 
 // Components
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 
 // Pages

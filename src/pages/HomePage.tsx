@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')] bg-cover bg-center opacity-60 "></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-6">
               Transforme o Planeta com Cada Reciclagem
             </h1>
-            <p className="text-xl text-green-800 mb-8">
+            <p className="text-xl text-green-200 mb-8">
               Junte-se à comunidade EcoViva e faça parte da revolução sustentável. 
               Registre suas reciclagens diárias e veja seu impacto crescer.
             </p>

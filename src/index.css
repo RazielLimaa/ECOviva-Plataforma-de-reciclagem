@@ -93,3 +93,57 @@
   transform: translateY(-5px);
   box-shadow: 0 15px 35px -10px rgba(16, 185, 129, 0.4);
 }
+
+keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdownExit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.dropdown-enter {
+  animation: dropdownEnter 0.2s ease forwards;
+}
+
+.dropdown-exit {
+  animation: dropdownExit 0.2s ease forwards;
+}
