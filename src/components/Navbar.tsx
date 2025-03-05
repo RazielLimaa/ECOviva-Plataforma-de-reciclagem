@@ -55,10 +55,10 @@ const Navbar: React.FC = () => {
     {
       label: 'Sobre',
       submenu: [
-        { label: 'Nossa História', icon: Globe, href: '/AboutUs' },
-        { label: 'Impacto Ambiental', icon: Leaf, href: '#impact' },
-        { label: 'Certificações', icon: Award, href: '#certificates' },
-        { label: 'Equipe', icon: Users, href: '#team' },
+        { label: 'Nossa História', icon: Globe, href: '/HistorySection' },
+        { label: 'Impacto Ambiental', icon: Leaf, href: '/ImpactPage' },
+        { label: 'Certificações', icon: Award, href: '/certificates' },
+        { label: 'Equipe', icon: Users, href: '/team' },
       ]
     },
     {
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
 
   const handleMouseLeave = () => {
     setIsDropdownExiting(true);
-    const timeout = setTimeout(() => {
+    const timeout = window.setTimeout(() => {
       setShowDropdown('');
       setIsDropdownExiting(false);
     }, 300);
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
                 <span className={`text-5xl font-bold transition-colors duration-300 ${
                   isScrolled ? 'text-white' : 'text-black-400'
                 }`}>
-                  EcoViva
+                  <span text-green-600>Eco</span>Viva
                 </span>
                 <span className={`text-xs transition-colors duration-300 ${
                   isScrolled ? 'text-green-400/80' : 'text-green-600/80'
@@ -158,9 +158,9 @@ const Navbar: React.FC = () => {
                   {item.submenu && showDropdown === item.label && (
                     <div
                       ref={dropdownRef}
-                      className={`absolute top-full left-0 mt-1 w-56 rounded-xl overflow-hidden border ${
+                      className={`absolute top-full left-0 mt-1 w-56 rounded-3xl overflow-hidden border ${
                         isScrolled
-                          ? 'bg-gray-800/90 backdrop-blur-lg shadow-[0_0_20px_rgba(0,0,0,0.3)] border-gray-700/50'
+                          ? 'bg-green-800/90 backdrop-blur-lg shadow-[0_0_20px_rgba(0,0,0,0.3)] border-green-300/90'
                           : 'bg-white/90 backdrop-blur-lg shadow-lg border-gray-200'
                       } ${isDropdownExiting ? 'dropdown-exit' : 'dropdown-enter'}`}
                     >

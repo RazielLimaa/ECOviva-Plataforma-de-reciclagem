@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -94,10 +96,10 @@
   box-shadow: 0 15px 35px -10px rgba(16, 185, 129, 0.4);
 }
 
-keyframes fadeInUp {
+@keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -105,60 +107,65 @@ keyframes fadeInUp {
   }
 }
 
-@keyframes fadeIn {
-  from {
+@keyframes fade-in-delayed {
+  0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-@keyframes dropdownEnter {
-  from {
+  50% {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes dropdownExit {
-  from {
+@keyframes fade-in-delayed-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  66% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
-  to {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
 }
 
-.dropdown-enter {
-  animation: dropdownEnter 0.2s ease forwards;
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
 }
 
-.dropdown-exit {
-  animation: dropdownExit 0.2s ease forwards;
+.animate-fade-in-delayed {
+  animation: fade-in-delayed 1.5s ease-out forwards;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.animate-fade-in-delayed-2 {
+  animation: fade-in-delayed-2 2s ease-out forwards;
 }
 
-.card {
-  padding: 2em;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.read-the-docs {
-  color: #888;
+/* Custom transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
+/* Clip paths for geometric shapes */
+.clip-hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.clip-pentagon {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
