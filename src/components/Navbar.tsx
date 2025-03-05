@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
     {
       label: 'Sobre',
       submenu: [
-        { label: 'Nossa História', icon: Globe, href: '#history' },
+        { label: 'Nossa História', icon: Globe, href: '/AboutUs' },
         { label: 'Impacto Ambiental', icon: Leaf, href: '#impact' },
         { label: 'Certificações', icon: Award, href: '#certificates' },
         { label: 'Equipe', icon: Users, href: '#team' },
