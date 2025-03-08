@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
       submenu: [
         { label: 'Nossa História', icon: Globe, href: '/HistorySection' },
         { label: 'Impacto Ambiental', icon: Leaf, href: '/ImpactPage' },
-        { label: 'Certificações', icon: Award, href: '/certificates' },
+        { label: 'Certificações', icon: Award, href: '/CertificatePage' },
         { label: 'Equipe', icon: Users, href: '/team' },
       ]
     },
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
       submenu: [
         { label: 'Reciclagem Diária', icon: Leaf, href: '/checkin' },
         { label: 'Educação Ambiental', icon: Globe, href: '#education' },
-        { label: 'Parcerias', icon: Users, href: '#partners' },
+        { label: 'Parcerias', icon: Users, href: '/ParceriasPage' },
       ]
     }
   ];

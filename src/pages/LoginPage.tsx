@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Leaf, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
+import { motion } from 'framer-motion';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -31,6 +32,18 @@ const LoginPage: React.FC = () => {
       console.error(err);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleSignUpClick = () => {
+    const leaf = document.querySelector('.leaf-icon') as HTMLElement;
+    if (leaf) {
+      leaf.style.transition = 'transform 1s ease-in-out';
+      leaf.style.transform = 'rotate(360deg)';
+      
+      setTimeout(() => {
+        navigate('/signup');
+      }, 1000);
     }
   };
   
@@ -117,7 +130,7 @@ const LoginPage: React.FC = () => {
             </div>
           </div>
           
-          <div>
+          <div className="space-y-4">
             <button
               type="submit"
               disabled={isLoading}
@@ -128,6 +141,24 @@ const LoginPage: React.FC = () => {
             >
               {isLoading ? 'Entrando...' : 'Entrar'}
             </button>
+
+            <motion.button
+              type="button"
+              onClick={handleSignUpClick}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full text-center text-green-600 hover:text-green-700 font-medium"
+            >
+              <Link to="/CreateAccount" className="relative">
+                Crie uma contaECO aqui!
+                <motion.div
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-600"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </Link>
+            </motion.button>
           </div>
         </form>
         

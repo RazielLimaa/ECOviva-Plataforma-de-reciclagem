@@ -1,6 +1,6 @@
 import React from 'react';
 import { Leaf, Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
-import { Link } from 'react-router-dom';
+
 
 const Footer: React.FC = () => {
   return (
@@ -28,36 +28,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-green-300">Links Rápidos</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-green-100 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/forum" className="text-green-100 hover:text-white transition-colors">
-                  Fórum
-                </Link>
-              </li>
-              <li>
-                <Link to="/login" className="text-green-100 hover:text-white transition-colors">
-                  Login
-                </Link>
-              </li>
-              <li>
-                <a href="#about" className="text-green-100 hover:text-white transition-colors">
-                  Sobre Nós
-                </a>
-              </li>
-            </ul>
-          </div>
+         
           
           <div>
             <h3 className="text-lg font-semibold mb-4 text-green-300">Contato</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
+              <li className="flex items-end space-x-3">
                 <MapPin className="h-5 w-5 text-green-300 mt-0.5" />
                 <span className="text-green-100">Av. Verde, 123, Jardim Ecológico, São Paulo - SP</span>
               </li>

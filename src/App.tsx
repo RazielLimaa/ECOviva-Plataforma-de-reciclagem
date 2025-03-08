@@ -13,6 +13,10 @@ import CheckInPage from './pages/CheckInPage';
 import ForumPage from './pages/ForumPage';
 import HistorySection from './pages/HistorySection';
 import ImpactPage from './pages/ImpactPage';
+import CertificatePage from './pages/CertificatePage';
+import ParceriaPage from './pages/ParceriasPage';
+import CreateAccount from './pages/CreateAccount';
+
 
 function App() {
   const { isAuthenticated } = useAuthStore();
@@ -39,6 +43,10 @@ function App() {
             <Route path="/forum" element={<ForumPage />} />
             <Route path="/HistorySection" element={<HistorySection />} />
             <Route path="/ImpactPage" element={<ImpactPage />} />
+            <Route path="/CertificatePage" element={<CertificatePage />} />
+            <Route path="/ParceriasPage" element={<ParceriaPage />} />
+            <Route path="/CreateAccount" element={<CreateAccount />} />
+            
           </Routes>
         </main>
         <Footer />
